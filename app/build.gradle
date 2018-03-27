@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+// apply plugin: 'dart.henson-plugin'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.todo.sdm.sdm_android_todo"
+        minSdkVersion 'P'
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.com.todo.sdm.sdm_android_todo.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:${android_support_lib_version}"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    // androidTestImplementation 'com.todo.sdm.sdm_android_todo:runner:1.0.1'
+    // androidTestImplementation 'com.todo.sdm.sdm_android_todo.espresso:espresso-core:3.0.1'
+
+    // RecyclerView
+    implementation "com.android.support:cardview-v7:${android_support_lib_version}"
+    implementation "com.android.support:recyclerview-v7:${android_support_lib_version}"
+
+    // Butter Knife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    // Dart & Henson
+    implementation 'com.f2prateek.dart:dart-annotations:2.0.1'
+    implementation 'com.f2prateek.dart:dart:2.0.1'
+    implementation 'com.f2prateek.dart:henson:2.0.1'
+    annotationProcessor 'com.f2prateek.dart:dart-processor:2.0.1'
+    annotationProcessor 'com.f2prateek.dart:henson-processor:2.0.1'
+
+}

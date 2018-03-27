@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".activitys.ListActivity"
+    >
+
+    <!-- 액션 버튼으로써 나타나는 "서치" 아이템  -->
+    <item android:id="@+id/action_plus"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/action_menu_1"
+        yourapp:showAsAction="ifRoom" />
+
+    <!-- 오버플로우 공간 안에 있는 "셋팅" 액션 아이템 -->
+    <item android:id="@+id/action_minus"
+        android:title="@string/action_menu_1"
+        yourapp:showAsAction="never" />
+
+</menu>

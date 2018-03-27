@@ -1,0 +1,14 @@
+<resources>
+    <!-- ENTRY -->
+    <string name="app_name">Todo</string>
+
+    <!-- LIST -->
+    <string name="action_menu_1">plus</string>
+    <string name="action_menu_2">minus</string>
+    <string name="title_activity_navi">NaviActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
